@@ -27,16 +27,25 @@
     }
 
     .container {
-      background-image: url('http://traversymedia.com/downloads/assets/beachshowcase.jpg');
+      background-image: url(http://traversymedia.com/downloads/assets/beachshowcase.jpg);
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
     }
   </style>
 
 </head>
 <body>
 
-<main>
+<main class="container">
   <section>
-    <div class="container">
+    <div>
       <div class="main">
         <h1 class="heading1">Welcome To The Beach</h1>
         <h4 class="heading4">
