@@ -14,8 +14,25 @@
 <body>
 
 
+<div x-data="{
+  search : '',
+  items : ['sharryy','ali','abdullah','ahmad'],
+  get filteredItems(){
+    return this.items.filter(
+      i => i.startsWith(this.search)
+    )
+  }
+}">
 
+  <label for="name" class="sr-only"></label>
+  <input x-model="search" id="name" type="text" placeholder="Search" autocomplete="off">
 
+  <ul>
+    <template x-for="item in filteredItems" x-bind:key="item">
+      <li x-text="item"></li>
+    </template>
+  </ul>
 
+</div>
 </body>
 </html>
